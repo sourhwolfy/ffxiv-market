@@ -1444,7 +1444,7 @@ img[loading] { opacity:0; }
       <div class="sec-jp">外見案内<br>モッズあり・なし</div>
     </div>
     <p class="app-intro reveal">
-      Can't find me? Use these references to spot me at the event. Two versions depending on whether you have Lightless (mod framework) installed.
+      Can't find me? Use these references to spot me at the event. Two versions depending on your client's visual features.
     </p>
 
     <div class="app-grid">
@@ -1459,8 +1459,8 @@ img[loading] { opacity:0; }
         <div class="cb tl"></div><div class="cb tr"></div>
         <div class="cb bl"></div><div class="cb br"></div>
 
-        <div class="app-badge app-badge--mod">With Lightless</div>
-        <p class="app-desc">If you have the Lightless mod framework installed, look for this appearance.</p>
+        <div class="app-badge app-badge--mod">Enhanced View</div>
+        <p class="app-desc">If your client has extra visual features enabled, look for this appearance.</p>
 
         <div class="app-imgs" style="grid-template-columns:1fr 1fr;gap:4px;">
           <div class="app-img-frame">
@@ -1485,8 +1485,8 @@ img[loading] { opacity:0; }
         <div class="cb tl"></div><div class="cb tr"></div>
         <div class="cb bl"></div><div class="cb br"></div>
 
-        <div class="app-badge app-badge--vanilla">Vanilla</div>
-        <p class="app-desc">No mods needed — this is how I appear for everyone, including those without Lightless.</p>
+        <div class="app-badge app-badge--vanilla">Standard View</div>
+        <p class="app-desc">This is how I appear for everyone using the standard client — no extra features needed.</p>
 
         <div class="app-imgs app-imgs--single">
           <div class="app-img-frame app-img-frame--tall">
@@ -1887,8 +1887,8 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{
 
   /* Gallery section — all g-item images as one group */
   const galleryImgs = buildGroup('.gallery-grid .zoomable');
-  document.querySelectorAll('.gallery-grid .zoomable').forEach((img,i)=>{
-    img.addEventListener('click',()=> open(galleryImgs, i));
+  document.querySelectorAll('.gallery-grid .g-item').forEach((item,i)=>{
+    item.addEventListener('click',()=> open(galleryImgs, i));
   });
 
   /* Appearance section — lightless as one group */
